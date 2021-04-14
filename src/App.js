@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import data from './data';
+import React, { useState } from 'react';
+import Product from './components/Product/Product'
+import ProductFilter from './components/ProductFilter/ProductFilter';
 import './App.css';
 
 function App() {
+  const [category, setCategory] = useState('All');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button
+          className="button"
+          category={'All'}
+          onClick={() => {
+              setCategory('All')
+            }}
+            >All {data.length}
+     </button>
+     <Product category={category} setCategory={setCategory} />
+     <ProductFilter category={category} />
     </div>
   );
 }

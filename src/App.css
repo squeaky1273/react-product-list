@@ -13,6 +13,17 @@
   }
 }
 
+.button {
+  border: 3px solid white;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: rgb(137, 218, 145);
+  color: rgb(10, 28, 0);
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
